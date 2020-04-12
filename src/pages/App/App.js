@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, NavLink } from 'react-router-dom';
+
 import * as itemAPI from '../../services/groceries-api';
 import ItemListPage from '../../pages/ItemList/ItemListPage';
 import AddItemPage from '../../pages/AddItemPage/AddItemPage';
 
 class App extends Component {
   state = {
-    groceries: [{ name: 'Bananas', quantity: 'All of them' }, { name: 'bread', quantity: 3 }]
+    groceries: []
   };
 
   handleAddItem = async newItemData => {
